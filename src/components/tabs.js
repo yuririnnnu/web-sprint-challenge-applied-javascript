@@ -42,7 +42,6 @@ const tabsAppender = (selector) => {
   .then(resp => {
     const topics = Tabs(resp);
     document.querySelector(selector).appendChild(topics);
-    console.log(topics)
   }).catch(err => {
     console.error(err);
   }).finally(() => console.log("Great job!"))
