@@ -16,18 +16,26 @@ const Tabs = (topics) => {
   // </div>
   const topic = document.createElement("div");
   topic.classList.add("topics");
-  // topics.forEach((top) => {
+  
+  const data = topics.data.topics;
+  // for (let i in data){
   //   const tab = document.createElement("div");
   //   tab.classList.add("tab");
-  //   tab.textContent = top;
+  //   tab.textContent = data[i];
   //   topic.appendChild(tab);
-  // });
-  for (let i = 0; i < topics.data.topics.length; i++) {
-    const div = document.createElement("div");
-    div.classList.add("tab");
-    div.textContent = topics.data.topics[i];
-    topic.appendChild(div);
-  }
+  // }
+  data.forEach(elem => {
+    const tab = document.createElement("div");
+    tab.classList.add("tab");
+    tab.textContent = elem;
+    topic.appendChild(tab);
+  });
+  // for (let i = 0; i < topics.data.topics.length; i++) {
+  //   const div = document.createElement("div");
+  //   div.classList.add("tab");
+  //   div.textContent = topics.data.topics[i];
+  //   topic.appendChild(div);
+  // }
   return topic;
 }
 

@@ -18,7 +18,7 @@ const Card = (article) => {
   //     <span>By { authorName }</span>
   //   </div>
   // </div>
-  console.log(article)
+  // console.log(article)
   const card = document.createElement("div");
   const headline = document.createElement("div");
   const author = document.createElement("div");
@@ -56,9 +56,9 @@ const cardAppender = (selector) => {
   .then(res => {
     const articles = res.data.articles;
     for (let a in articles) {
-      console.log(articles[a]);
+      // console.log(articles[a]);
       for (let i in articles[a]) {
-        console.log(articles[a][i])
+        // console.log(articles[a][i])
         document.querySelector(selector).appendChild(Card(articles[a][i]))
       }
     }
